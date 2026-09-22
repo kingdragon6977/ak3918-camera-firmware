@@ -1,0 +1,498 @@
+extracted/mtd4-rootfs/bin/ash -> busybox
+extracted/mtd4-rootfs/bin/base64 -> busybox
+extracted/mtd4-rootfs/bin/busybox -> 
+extracted/mtd4-rootfs/bin/cat -> busybox
+extracted/mtd4-rootfs/bin/catv -> busybox
+extracted/mtd4-rootfs/bin/chattr -> busybox
+extracted/mtd4-rootfs/bin/chgrp -> busybox
+extracted/mtd4-rootfs/bin/chmod -> busybox
+extracted/mtd4-rootfs/bin/chown -> busybox
+extracted/mtd4-rootfs/bin/cp -> busybox
+extracted/mtd4-rootfs/bin/cpio -> busybox
+extracted/mtd4-rootfs/bin/cttyhack -> busybox
+extracted/mtd4-rootfs/bin/date -> busybox
+extracted/mtd4-rootfs/bin/dd -> busybox
+extracted/mtd4-rootfs/bin/df -> busybox
+extracted/mtd4-rootfs/bin/dmesg -> busybox
+extracted/mtd4-rootfs/bin/dnsdomainname -> busybox
+extracted/mtd4-rootfs/bin/dumpkmap -> busybox
+extracted/mtd4-rootfs/bin/echo -> busybox
+extracted/mtd4-rootfs/bin/egrep -> busybox
+extracted/mtd4-rootfs/bin/false -> busybox
+extracted/mtd4-rootfs/bin/fdflush -> busybox
+extracted/mtd4-rootfs/bin/fgrep -> busybox
+extracted/mtd4-rootfs/bin/free -> busybox
+extracted/mtd4-rootfs/bin/fsync -> busybox
+extracted/mtd4-rootfs/bin/getopt -> busybox
+extracted/mtd4-rootfs/bin/grep -> busybox
+extracted/mtd4-rootfs/bin/gunzip -> busybox
+extracted/mtd4-rootfs/bin/gzip -> busybox
+extracted/mtd4-rootfs/bin/hostname -> busybox
+extracted/mtd4-rootfs/bin/ionice -> busybox
+extracted/mtd4-rootfs/bin/iostat -> busybox
+extracted/mtd4-rootfs/bin/ipaddr -> busybox
+extracted/mtd4-rootfs/bin/ip -> busybox
+extracted/mtd4-rootfs/bin/ipcalc -> busybox
+extracted/mtd4-rootfs/bin/iplink -> busybox
+extracted/mtd4-rootfs/bin/iproute -> busybox
+extracted/mtd4-rootfs/bin/iprule -> busybox
+extracted/mtd4-rootfs/bin/iptunnel -> busybox
+extracted/mtd4-rootfs/bin/killall5 -> busybox
+extracted/mtd4-rootfs/bin/killall -> busybox
+extracted/mtd4-rootfs/bin/kill -> busybox
+extracted/mtd4-rootfs/bin/linux32 -> busybox
+extracted/mtd4-rootfs/bin/linux64 -> busybox
+extracted/mtd4-rootfs/bin/ln -> busybox
+extracted/mtd4-rootfs/bin/login -> busybox
+extracted/mtd4-rootfs/bin/lsattr -> busybox
+extracted/mtd4-rootfs/bin/ls -> busybox
+extracted/mtd4-rootfs/bin/mkdir -> busybox
+extracted/mtd4-rootfs/bin/mknod -> busybox
+extracted/mtd4-rootfs/bin/more -> busybox
+extracted/mtd4-rootfs/bin/mount -> busybox
+extracted/mtd4-rootfs/bin/mountpoint -> busybox
+extracted/mtd4-rootfs/bin/mpstat -> busybox
+extracted/mtd4-rootfs/bin/mt -> busybox
+extracted/mtd4-rootfs/bin/mv -> busybox
+extracted/mtd4-rootfs/bin/netstat -> busybox
+extracted/mtd4-rootfs/bin/nice -> busybox
+extracted/mtd4-rootfs/bin/pidof -> busybox
+extracted/mtd4-rootfs/bin/ping -> busybox
+extracted/mtd4-rootfs/bin/powertop -> busybox
+extracted/mtd4-rootfs/bin/printenv -> busybox
+extracted/mtd4-rootfs/bin/ps -> busybox
+extracted/mtd4-rootfs/bin/pwd -> busybox
+extracted/mtd4-rootfs/bin/rm -> busybox
+extracted/mtd4-rootfs/bin/rmdir -> busybox
+extracted/mtd4-rootfs/bin/scriptreplay -> busybox
+extracted/mtd4-rootfs/bin/sed -> busybox
+extracted/mtd4-rootfs/bin/setarch -> busybox
+extracted/mtd4-rootfs/bin/setserial -> busybox
+extracted/mtd4-rootfs/bin/sh -> busybox
+extracted/mtd4-rootfs/bin/sleep -> busybox
+extracted/mtd4-rootfs/bin/stat -> busybox
+extracted/mtd4-rootfs/bin/stty -> busybox
+extracted/mtd4-rootfs/bin/su -> busybox
+extracted/mtd4-rootfs/bin/sync -> busybox
+extracted/mtd4-rootfs/bin/tar -> busybox
+extracted/mtd4-rootfs/bin/telnetd -> busybox
+extracted/mtd4-rootfs/bin/touch -> busybox
+extracted/mtd4-rootfs/bin/true -> busybox
+extracted/mtd4-rootfs/bin/umount -> busybox
+extracted/mtd4-rootfs/bin/uname -> busybox
+extracted/mtd4-rootfs/bin/uncompress -> busybox
+extracted/mtd4-rootfs/bin/usleep -> busybox
+extracted/mtd4-rootfs/bin/vi -> busybox
+extracted/mtd4-rootfs/bin/watch -> busybox
+extracted/mtd4-rootfs/bin/zcat -> busybox
+extracted/mtd4-rootfs/etc/fstab -> 
+extracted/mtd4-rootfs/etc/group -> 
+extracted/mtd4-rootfs/etc/host.conf -> 
+extracted/mtd4-rootfs/etc/hosts -> 
+extracted/mtd4-rootfs/etc/init.d/rcS -> 
+extracted/mtd4-rootfs/etc/inittab -> 
+extracted/mtd4-rootfs/etc/ld.so.conf -> 
+extracted/mtd4-rootfs/etc/mdev.conf -> 
+extracted/mtd4-rootfs/etc/nsswitch.conf -> 
+extracted/mtd4-rootfs/etc/passwd -> jffs2/passwd
+extracted/mtd4-rootfs/etc/profile -> 
+extracted/mtd4-rootfs/etc/resolv.conf -> jffs2/resolv.conf
+extracted/mtd4-rootfs/etc/services -> 
+extracted/mtd4-rootfs/etc/shadow -> jffs2/shadow
+extracted/mtd4-rootfs/etc/sysconfig/HOSTNAME -> 
+extracted/mtd4-rootfs/etc/udhcpd.conf -> 
+extracted/mtd4-rootfs/init -> bin/busybox
+extracted/mtd4-rootfs/lib/ld-uClibc-0.9.33.2.so -> 
+extracted/mtd4-rootfs/lib/ld-uClibc.so.0 -> ld-uClibc-0.9.33.2.so
+extracted/mtd4-rootfs/lib/libatomic.so.1.0.0 -> 
+extracted/mtd4-rootfs/lib/libatomic.so.1 -> libatomic.so.1.0.0
+extracted/mtd4-rootfs/lib/libatomic.so -> libatomic.so.1.0.0
+extracted/mtd4-rootfs/lib/libcrypt-0.9.33.2.so -> 
+extracted/mtd4-rootfs/lib/libcrypt.so.0 -> libcrypt-0.9.33.2.so
+extracted/mtd4-rootfs/lib/libc.so.0 -> libuClibc-0.9.33.2.so
+extracted/mtd4-rootfs/lib/libdl-0.9.33.2.so -> 
+extracted/mtd4-rootfs/lib/libdl.so.0 -> libdl-0.9.33.2.so
+extracted/mtd4-rootfs/lib/libgcc_s.so -> 
+extracted/mtd4-rootfs/lib/libgcc_s.so.1 -> 
+extracted/mtd4-rootfs/lib/libiw.so.29 -> 
+extracted/mtd4-rootfs/lib/libm-0.9.33.2.so -> 
+extracted/mtd4-rootfs/lib/libm.so.0 -> libm-0.9.33.2.so
+extracted/mtd4-rootfs/lib/libnsl-0.9.33.2.so -> 
+extracted/mtd4-rootfs/lib/libnsl.so.0 -> libnsl-0.9.33.2.so
+extracted/mtd4-rootfs/lib/libpthread-0.9.33.2.so -> 
+extracted/mtd4-rootfs/lib/libpthread.so.0 -> libpthread-0.9.33.2.so
+extracted/mtd4-rootfs/lib/libresolv-0.9.33.2.so -> 
+extracted/mtd4-rootfs/lib/libresolv.so.0 -> libresolv-0.9.33.2.so
+extracted/mtd4-rootfs/lib/librt-0.9.33.2.so -> 
+extracted/mtd4-rootfs/lib/librt.so.0 -> librt-0.9.33.2.so
+extracted/mtd4-rootfs/lib/libssl.so.1.0.0 -> 
+extracted/mtd4-rootfs/lib/libstdc++.so.6.0.19 -> 
+extracted/mtd4-rootfs/lib/libstdc++.so.6.0.19-gdb.py -> 
+extracted/mtd4-rootfs/lib/libstdc++.so.6 -> libstdc++.so.6.0.19
+extracted/mtd4-rootfs/lib/libstdc++.so -> libstdc++.so.6.0.19
+extracted/mtd4-rootfs/lib/libubacktrace-0.9.33.2.so -> 
+extracted/mtd4-rootfs/lib/libubacktrace.so.0 -> libubacktrace-0.9.33.2.so
+extracted/mtd4-rootfs/lib/libuClibc-0.9.33.2.so -> 
+extracted/mtd4-rootfs/lib/libutil-0.9.33.2.so -> 
+extracted/mtd4-rootfs/lib/libutil.so.0 -> libutil-0.9.33.2.so
+extracted/mtd4-rootfs/sbin/acpid -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/adjtimex -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/arp -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/blkid -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/blockdev -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/bootchartd -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/depmod -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/devmem -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/fbsplash -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/fdisk -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/freeramdisk -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/fsck -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/fstrim -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/ftpd -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/getty -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/halt -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/hdparm -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/hwclock -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/ifconfig -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/ifdown -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/ifenslave -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/ifup -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/init -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/inotifyd -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/insmod -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/ipaddr -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/ip -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/iplink -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/iproute -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/iprule -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/iptunnel -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/klogd -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/ldconfig -> 
+extracted/mtd4-rootfs/sbin/loadkmap -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/logread -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/losetup -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/lsmod -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/makedevs -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/mdev -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/mkdosfs -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/mkfs.vfat -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/mkswap -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/mmc_test -> 
+extracted/mtd4-rootfs/sbin/modinfo -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/modprobe -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/nameif -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/passwd -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/pivot_root -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/poweroff -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/reboot -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/rmmod -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/route -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/runlevel -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/setconsole -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/slattach -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/sulogin -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/swapoff -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/swapon -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/switch_root -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/sysctl -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/syslogd -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/telnetd -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/tunctl -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/udhcpc -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/udhcpd -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/uevent -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/updater -> 
+extracted/mtd4-rootfs/sbin/vconfig -> ../bin/busybox
+extracted/mtd4-rootfs/sbin/watchdog -> ../bin/busybox
+extracted/mtd5-usrfs/bin/ak_adec_demo -> 
+extracted/mtd5-usrfs/bin/ar -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/arping -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/awk -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/basename -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/beep -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/[ -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/[[ -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/bunzip2 -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/bzcat -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/cal -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/ccli -> 
+extracted/mtd5-usrfs/bin/chat -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/chrt -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/chvt -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/cksum -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/clear -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/cmd -> 
+extracted/mtd5-usrfs/bin/cmd_serverd -> 
+extracted/mtd5-usrfs/bin/cmp -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/crontab -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/cut -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/dc -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/deallocvt -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/diff -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/dirname -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/discovery -> 
+extracted/mtd5-usrfs/bin/dos2unix -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/du -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/dumpleases -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/eject -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/env -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/erase_dev -> 
+extracted/mtd5-usrfs/bin/expand -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/expr -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/fgconsole -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/find -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/flock -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/fold -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/free -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/ftpget -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/ftpput -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/fuser -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/getconf -> 
+extracted/mtd5-usrfs/bin/groups -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/hd -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/head -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/hexdump -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/hostid -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/iconv -> 
+extracted/mtd5-usrfs/bin/id -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/ifplugd -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/install -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/ipcrm -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/ipcs -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/iwconfig -> 
+extracted/mtd5-usrfs/bin/iwlist -> 
+extracted/mtd5-usrfs/bin/iwpriv -> 
+extracted/mtd5-usrfs/bin/kbd_mode -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/killall5 -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/killall -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/last -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/ldd -> 
+extracted/mtd5-usrfs/bin/less -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/logger -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/logname -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/lsof -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/lspci -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/lsusb -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/lzcat -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/lzma -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/md5sum -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/mdns -> 
+extracted/mtd5-usrfs/bin/mesg -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/microcom -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/mkfifo -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/nc -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/nmeter -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/nohup -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/nslookup -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/od -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/openvt -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/passwd -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/patch -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/pgrep -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/pkill -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/pmap -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/printf -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/pscan -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/pstree -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/ptz_daemon -> 
+extracted/mtd5-usrfs/bin/ptz_daemon_dyn -> 
+extracted/mtd5-usrfs/bin/pwdx -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/readahead -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/read_dev -> 
+extracted/mtd5-usrfs/bin/read_gpio -> 
+extracted/mtd5-usrfs/bin/read_hw -> 
+extracted/mtd5-usrfs/bin/readlink -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/realpath -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/renice -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/reset -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/resize -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/rtcwake -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/rtsp -> 
+extracted/mtd5-usrfs/bin/rx -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/script -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/seq -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/setkeycodes -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/setsid -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/sha1sum -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/sha256sum -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/sha3sum -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/sha512sum -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/showkey -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/smemcap -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/sort -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/split -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/strings -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/sum -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/tail -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/tcpsvd -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/tee -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/telnet -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/test -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/testptz -> 
+extracted/mtd5-usrfs/bin/tftp -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/tftpd -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/time -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/timeout -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/top -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/traceroute -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/tr -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/truncate -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/tty -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/udpsvd -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/uniq -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/unix2dos -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/unlink -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/unlzma -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/unxz -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/unzip -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/uptime -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/uudecode -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/uuencode -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/vlock -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/volname -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/wc -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/wget -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/which -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/whoami -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/who -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/whois -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/wpa_cli -> 
+extracted/mtd5-usrfs/bin/wpa_passphrase -> 
+extracted/mtd5-usrfs/bin/wpa_supplicant -> 
+extracted/mtd5-usrfs/bin/write_dev -> 
+extracted/mtd5-usrfs/bin/write_gpio -> 
+extracted/mtd5-usrfs/bin/write_hw -> 
+extracted/mtd5-usrfs/bin/xargs -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/xz -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/xzcat -> ../../bin/busybox
+extracted/mtd5-usrfs/bin/yes -> ../../bin/busybox
+extracted/mtd5-usrfs/fw_version -> 
+extracted/mtd5-usrfs/lib/libakae.so -> 
+extracted/mtd5-usrfs/lib/libakaudiocodec.so -> 
+extracted/mtd5-usrfs/lib/libakaudiofilter.so -> 
+extracted/mtd5-usrfs/lib/libakispsdk.so -> 
+extracted/mtd5-usrfs/lib/libakmedia.so -> 
+extracted/mtd5-usrfs/lib/libak_mt.so -> 
+extracted/mtd5-usrfs/lib/libakstreamenc.so -> 
+extracted/mtd5-usrfs/lib/libakuio.so -> 
+extracted/mtd5-usrfs/lib/libakv_encode.so -> 
+extracted/mtd5-usrfs/lib/libapp_net.so -> 
+extracted/mtd5-usrfs/lib/libapp_rtsp.so -> 
+extracted/mtd5-usrfs/lib/libcrypto.so.1.0.0 -> 
+extracted/mtd5-usrfs/lib/libdl-0.9.33.2.so -> 
+extracted/mtd5-usrfs/lib/libgcc_s.so.1 -> 
+extracted/mtd5-usrfs/lib/libhandler.so -> 
+extracted/mtd5-usrfs/lib/libiconv.so -> 
+extracted/mtd5-usrfs/lib/libmpi_aed.so -> 
+extracted/mtd5-usrfs/lib/libmpi_aenc.so -> 
+extracted/mtd5-usrfs/lib/libmpi_venc.so -> 
+extracted/mtd5-usrfs/lib/libnl.so.1 -> 
+extracted/mtd5-usrfs/lib/liboss.so -> 
+extracted/mtd5-usrfs/lib/libplat_ai.so -> 
+extracted/mtd5-usrfs/lib/libplat_common.so -> 
+extracted/mtd5-usrfs/lib/libplat_drv.so -> 
+extracted/mtd5-usrfs/lib/libplat_ipcsrv.so -> 
+extracted/mtd5-usrfs/lib/libplat_thread.so -> 
+extracted/mtd5-usrfs/lib/libplat_venc_cb.so -> 
+extracted/mtd5-usrfs/lib/libplat_vi.so -> 
+extracted/mtd5-usrfs/lib/libplat_vpss.so -> 
+extracted/mtd5-usrfs/lib/libpthread-0.9.33.2.so -> 
+extracted/mtd5-usrfs/lib/libscanner.so -> 
+extracted/mtd5-usrfs/local/ak_font_16.bin -> 
+extracted/mtd5-usrfs/local/ca.crt -> 
+extracted/mtd5-usrfs/local/factory_cfg.ini -> 
+extracted/mtd5-usrfs/local/isp_gc1034.conf -> 
+extracted/mtd5-usrfs/local/isp_gc1054.conf -> 
+extracted/mtd5-usrfs/local/isp_gc1084.conf -> 
+extracted/mtd5-usrfs/local/isp_h62.conf -> 
+extracted/mtd5-usrfs/local/isp_h63.conf -> 
+extracted/mtd5-usrfs/local/yi_cfg.ini -> 
+extracted/mtd5-usrfs/modules/akcamera.ko -> 
+extracted/mtd5-usrfs/modules/ak_info_dump.ko -> 
+extracted/mtd5-usrfs/modules/g_file_storage.ko -> 
+extracted/mtd5-usrfs/modules/g_mass_storage.ko -> 
+extracted/mtd5-usrfs/modules/otg-hs.ko -> 
+extracted/mtd5-usrfs/modules/rtl8188fu.ko -> 
+extracted/mtd5-usrfs/modules/sensor_gc1034.ko -> 
+extracted/mtd5-usrfs/modules/sensor_gc1054.ko -> 
+extracted/mtd5-usrfs/modules/sensor_gc1084.ko -> 
+extracted/mtd5-usrfs/modules/sensor_h62.ko -> 
+extracted/mtd5-usrfs/modules/sensor_h63.ko -> 
+extracted/mtd5-usrfs/modules/ssv6x5x.ko -> 
+extracted/mtd5-usrfs/modules/ssv6x5x-sw.bin -> 
+extracted/mtd5-usrfs/modules/udc.ko -> 
+extracted/mtd5-usrfs/modules/usbburn.ko -> 
+extracted/mtd5-usrfs/sbin/addgroup -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/adduser -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/ap.sh -> 
+extracted/mtd5-usrfs/sbin/arping -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/brctl -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/camera.sh -> 
+extracted/mtd5-usrfs/sbin/chat -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/chroot -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/crond -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/crypt_file -> 
+extracted/mtd5-usrfs/sbin/default.script -> 
+extracted/mtd5-usrfs/sbin/delgroup -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/deluser -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/device_save_atmb.sh -> 
+extracted/mtd5-usrfs/sbin/device_save.sh -> 
+extracted/mtd5-usrfs/sbin/device_save_ssv6x5x.sh -> 
+extracted/mtd5-usrfs/sbin/dhcprelay -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/dnsd -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/ether-wake -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/eth_manage.sh -> 
+extracted/mtd5-usrfs/sbin/fakeidentd -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/fbset -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/fdformat -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/ftpd -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/hostapd -> 
+extracted/mtd5-usrfs/sbin/hostapd_atmb -> 
+extracted/mtd5-usrfs/sbin/hostapd_atmb.conf -> 
+extracted/mtd5-usrfs/sbin/hostapd_ssv6x5x -> 
+extracted/mtd5-usrfs/sbin/i2cdetect -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/i2cdump -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/i2cget -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/i2cset -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/ifplugd -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/inetd -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/killall5 -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/kill_pro.sh -> 
+extracted/mtd5-usrfs/sbin/led.sh -> 
+extracted/mtd5-usrfs/sbin/led_status.sh -> 
+extracted/mtd5-usrfs/sbin/loadfont -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/nanddump -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/nandwrite -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/nbd-client -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/net_manage.sh -> 
+extracted/mtd5-usrfs/sbin/ntpd -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/powertop -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/rdate -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/rdev -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/readahead -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/readprofile -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/recover_cfg.sh -> 
+extracted/mtd5-usrfs/sbin/rtcwake -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/service.sh -> 
+extracted/mtd5-usrfs/sbin/setfont -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/setlogcons -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/standby.sh -> 
+extracted/mtd5-usrfs/sbin/station_connect.sh -> 
+extracted/mtd5-usrfs/sbin/telnetd -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/tftpd -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/ubiattach -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/ubidetach -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/ubimkvol -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/ubirmvol -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/ubirsvol -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/ubiupdatevol -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/udhcpd -> ../../bin/busybox
+extracted/mtd5-usrfs/sbin/udisk.sh -> 
+extracted/mtd5-usrfs/sbin/update_play_aac.sh -> 
+extracted/mtd5-usrfs/sbin/update.sh -> 
+extracted/mtd5-usrfs/sbin/wifi_ap.sh -> 
+extracted/mtd5-usrfs/sbin/wifi_driver.sh -> 
+extracted/mtd5-usrfs/sbin/wifi_manage.sh -> 
+extracted/mtd5-usrfs/sbin/wifi_run.sh -> 
+extracted/mtd5-usrfs/sbin/wifi_station.sh -> 
+extracted/mtd5-usrfs/share/udhcpc/default.script -> 

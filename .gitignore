@@ -1,0 +1,17 @@
+# Raw flash/MTD dumps - may contain credentials/device-specific data
+mtds/mtd0
+mtds/mtd1
+mtds/mtd2
+mtds/mtd3
+mtds/mtd4
+mtds/mtd5
+mtds/mtd6
+
+# Extracted writable JFFS2 - contains WiFi/password/device configuration
+mtds/extracted/mtd6-jffs2/
+
+# Temporary/generated files
+*.log
+*.check
+*.bak
+*~

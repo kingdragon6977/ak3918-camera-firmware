@@ -1,0 +1,77 @@
+#!/bin/sh
+
+#! /bin/sh
+
+echo "mount all file system..."
+mkdir /dev/pts
+/bin/mount -av
+
+echo "start telnet......"
+telnetd &
+
+runlevel=S
+prevlevel=N
+umask 022
+export runlevel prevlevel
+
+echo "starting mdev..."
+/bin/echo /sbin/mdev > /proc/sys/kernel/hotplug
+mdev -s
+
+mkdir /var/cache
+mkdir /var/run
+mkdir /var/log
+mkdir /var/spool
+
+echo "[+] Mounting filesystems..."
+mount -t squashfs /dev/mtdblock5 /usr
+mount -t jffs2 /dev/mtdblock6 /etc/jffs2
+
+
+/usr/bin/tcpsvd 0 21 ftpd -w / -t 600 &
+
+export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/data
+export LD_LIBRARY_PATH=/lib:/usr/lib
+
+# logging (recommended)
+mkdir -p /var/log
+syslogd -O /var/log/messages &
+klogd &
+
+# loopback
+ifconfig lo up
+
+# memory tuning
+echo 2048 > /proc/sys/vm/min_free_kbytes
+ /usr/sbin/wifi_manage.sh start
+echo "[+] Starting WiFi..."
+/usr/sbin/wifi_station.sh 3 REDACTED_SSID REDACTED_PASSWORD
+
+sleep 5
+
+echo "[+] Loading camera..."
+insmod /usr/modules/sensor_gc1084.ko
+sleep 1
+insmod /usr/modules/akcamera.ko
+insmod /usr/modules/ak_info_dump.ko
+
+
+sleep 1
+telnetd &
+echo "[+] Starting RTSP..."
+/usr/bin/rtsp &
+
+sleep 1
+
+echo "[+] Starting PTZ..."
+/usr/bin/ptz_daemon_dyn &
+
+sleep 5
+ntpd -n -N -p 162.159.200.1 &
+#/data/runptz.sh &
+
+#sleep 3
+
+#/data/irrun.ptz &
+
+echo "[+] System ready"
