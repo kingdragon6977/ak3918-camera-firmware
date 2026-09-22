@@ -1,0 +1,47 @@
+
+mtds/extracted/mtd5-usrfs/bin/rtsp:     file format elf32-littlearm
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .interp       00000014  000080f4  000080f4  000000f4  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  1 .hash         00000164  00008108  00008108  00000108  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  2 .dynsym       00000320  0000826c  0000826c  0000026c  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  3 .dynstr       0000039a  0000858c  0000858c  0000058c  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  4 .rel.dyn      00000008  00008928  00008928  00000928  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  5 .rel.plt      00000118  00008930  00008930  00000930  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  6 .init         00000010  00008a48  00008a48  00000a48  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  7 .plt          000001b8  00008a58  00008a58  00000a58  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  8 .text         00000fa0  00008c10  00008c10  00000c10  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  9 .fini         00000010  00009bb0  00009bb0  00001bb0  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 10 .rodata       00000384  00009bc0  00009bc0  00001bc0  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 11 .eh_frame     00000004  00009f44  00009f44  00001f44  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 12 .init_array   00000004  00012000  00012000  00002000  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+ 13 .fini_array   00000004  00012004  00012004  00002004  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+ 14 .jcr          00000004  00012008  00012008  00002008  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+ 15 .dynamic      00000160  0001200c  0001200c  0000200c  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+ 16 .got          00000098  0001216c  0001216c  0000216c  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+ 17 .data         000018fc  00012204  00012204  00002204  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+ 18 .bss          00000068  00013b00  00013b00  00003b00  2**3
+                  ALLOC
+ 19 .comment      00000079  00000000  00000000  00003b00  2**0
+                  CONTENTS, READONLY
+ 20 .ARM.attributes 0000002e  00000000  00000000  00003b79  2**0
+                  CONTENTS, READONLY

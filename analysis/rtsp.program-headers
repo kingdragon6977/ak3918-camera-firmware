@@ -1,0 +1,23 @@
+
+Elf file type is EXEC (Executable file)
+Entry point 0x8c10
+There are 6 program headers, starting at offset 52
+
+Program Headers:
+  Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz  Flg Align
+  PHDR           0x000034 0x00008034 0x00008034 0x000c0 0x000c0 R E 0x4
+  INTERP         0x0000f4 0x000080f4 0x000080f4 0x00014 0x00014 R   0x1
+      [Requesting program interpreter: /lib/ld-uClibc.so.0]
+  LOAD           0x000000 0x00008000 0x00008000 0x01f48 0x01f48 R E 0x8000
+  LOAD           0x002000 0x00012000 0x00012000 0x01b00 0x01b68 RW  0x8000
+  DYNAMIC        0x00200c 0x0001200c 0x0001200c 0x00160 0x00160 RW  0x4
+  GNU_STACK      0x000000 0x00000000 0x00000000 0x00000 0x00000 RW  0x10
+
+ Section to Segment mapping:
+  Segment Sections...
+   00     
+   01     .interp 
+   02     .interp .hash .dynsym .dynstr .rel.dyn .rel.plt .init .plt .text .fini .rodata .eh_frame 
+   03     .init_array .fini_array .jcr .dynamic .got .data .bss 
+   04     .dynamic 
+   05     
