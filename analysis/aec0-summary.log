@@ -1,0 +1,40 @@
+[33m[00:00:25.680|  warn|        ] [0m"akae_h264utils.c:60" Condition ( "len > sizeof(_SHORT_START_CODE)" ) Failed.
+[33m[00:00:25.725|  warn|        ] [0m"akae_h264utils.c:60" Condition ( "len > sizeof(_SHORT_START_CODE)" ) Failed.
+[33m[00:00:51.519|  warn|        ] [0m"akae_h264utils.c:60" Condition ( "len > sizeof(_SHORT_START_CODE)" ) Failed.
+[33m[00:00:51.551|  warn|        ] [0m"akae_h264utils.c:60" Condition ( "len > sizeof(_SHORT_START_CODE)" ) Failed.
+[33m[00:01:16.561|  warn|        ] [0m"akae_h264utils.c:60" Condition ( "len > sizeof(_SHORT_START_CODE)" ) Failed.
+[33m[00:01:16.863|  warn|        ] [0m"akae_h264utils.c:60" Condition ( "len > sizeof(_SHORT_START_CODE)" ) Failed.
+[33m[00:01:24.978|  warn|        ] [0m"akae_h264utils.c:60" Condition ( "len > sizeof(_SHORT_START_CODE)" ) Failed.
+[33m[00:01:25.281|  warn|        ] [0m"akae_h264utils.c:60" Condition ( "len > sizeof(_SHORT_START_CODE)" ) Failed.
+[33m[00:01:41.816|  warn|        ] [0m"akae_h264utils.c:60" Condition ( "len > sizeof(_SHORT_START_CODE)" ) Failed.
+[33m[00:01:42.155|  warn|        ] [0m"akae_h264utils.c:60" Condition ( "len > sizeof(_SHORT_START_CODE)" ) Failed.
+[33m[00:02:15.640|  warn|        ] [0m"akae_h264utils.c:60" Condition ( "len > sizeof(_SHORT_START_CODE)" ) Failed.
+[33m[00:02:15.973|  warn|        ] [0m"akae_h264utils.c:60" Condition ( "len > sizeof(_SHORT_START_CODE)" ) Failed.
+[33m[00:02:41.039|  warn|        ] [0m"akae_h264utils.c:60" Condition ( "len > sizeof(_SHORT_START_CODE)" ) Failed.
+[33m[00:02:41.873|  warn|        ] [0m"akae_h264utils.c:60" Condition ( "len > sizeof(_SHORT_START_CODE)" ) Failed.
+[33m[00:02:49.496|  warn|        ] [0m"akae_h264utils.c:60" Condition ( "len > sizeof(_SHORT_START_CODE)" ) Failed.
+[33m[00:02:50.001|  warn|        ] [0m"akae_h264utils.c:60" Condition ( "len > sizeof(_SHORT_START_CODE)" ) Failed.
+[33m[00:03:06.373|  warn|        ] [0m"akae_h264utils.c:60" Condition ( "len > sizeof(_SHORT_START_CODE)" ) Failed.
+[33m[00:03:06.489|  warn|        ] [0m"akae_h264utils.c:60" Condition ( "len > sizeof(_SHORT_START_CODE)" ) Failed.
+[smooth_ts:1223] cur_ts too small, cur_ts:1839600, pre_ts:1839613, ts_offset:-25
+[smooth_ts:1223] cur_ts too small, cur_ts:1839600, pre_ts:1839613, ts_offset:-25
+[33m[00:03:40.163|  warn|        ] [0m"akae_h264utils.c:60" Condition ( "len > sizeof(_SHORT_START_CODE)" ) Failed.
+[33m[00:03:40.632|  warn|        ] [0m"akae_h264utils.c:60" Condition ( "len > sizeof(_SHORT_START_CODE)" ) Failed.
+[smooth_ts:1223] cur_ts too small, cur_ts:1869333, pre_ts:1869346, ts_offset:-9
+[smooth_ts:1223] cur_ts too small, cur_ts:1869333, pre_ts:1869346, ts_offset:-9
+[33m[00:04:05.508|  warn|        ] [0m"akae_h264utils.c:60" Condition ( "len > sizeof(_SHORT_START_CODE)" ) Failed.
+[33m[00:04:05.558|  warn|        ] [0m"akae_h264utils.c:60" Condition ( "len > sizeof(_SHORT_START_CODE)" ) Failed.
+[33m[00:04:13.955|  warn|        ] [0m"akae_h264utils.c:60" Condition ( "len > sizeof(_SHORT_START_CODE)" ) Failed.
+[33m[00:04:14.791|  warn|        ] [0m"akae_h264utils.c:60" Condition ( "len > sizeof(_SHORT_START_CODE)" ) Failed.
+[33m[00:04:30.862|  warn|        ] [0m"akae_h264utils.c:60" Condition ( "len > sizeof(_SHORT_START_CODE)" ) Failed.
+[33m[00:04:30.915|  warn|        ] [0m"akae_h264utils.c:60" Condition ( "len > sizeof(_SHORT_START_CODE)" ) Failed.
+[33m[00:05:04.654|  warn|        ] [0m"akae_h264utils.c:60" Condition ( "len > sizeof(_SHORT_START_CODE)" ) Failed.
+[33m[00:05:04.787|  warn|        ] [0m"akae_h264utils.c:60" Condition ( "len > sizeof(_SHORT_START_CODE)" ) Failed.
+[smooth_ts:1223] cur_ts too small, cur_ts:1952200, pre_ts:1952210, ts_offset:-25
+[smooth_ts:1223] cur_ts too small, cur_ts:1952200, pre_ts:1952210, ts_offset:-25
+[33m[00:05:29.988|  warn|        ] [0m"akae_h264utils.c:60" Condition ( "len > sizeof(_SHORT_START_CODE)" ) Failed.
+[33m[00:05:30.281|  warn|        ] [0m"akae_h264utils.c:60" Condition ( "len > sizeof(_SHORT_START_CODE)" ) Failed.
+[33m[00:05:38.459|  warn|        ] [0m"akae_h264utils.c:60" Condition ( "len > sizeof(_SHORT_START_CODE)" ) Failed.
+[33m[00:05:38.635|  warn|        ] [0m"akae_h264utils.c:60" Condition ( "len > sizeof(_SHORT_START_CODE)" ) Failed.
+[33m[00:05:55.353|  warn|        ] [0m"akae_h264utils.c:60" Condition ( "len > sizeof(_SHORT_START_CODE)" ) Failed.
+[33m[00:05:55.595|  warn|        ] [0m"akae_h264utils.c:60" Condition ( "len > sizeof(_SHORT_START_CODE)" ) Failed.
