@@ -1,0 +1,56 @@
+default log level=4
+[ak_vi_match_sensor:849] config_file: /etc/jffs2/
+[1;33m[isp.conf]version: 3V4_010601, sensor id: 0x1084, style id: 0
+[m[isp.conf]modify time: 2023-1-6 09:58:22
+[check_file:347] check isp cfg: /etc/jffs2/isp_gc1084.conf OK
+[1;33m[match_all_config:204] /etc/jffs2/isp_gc1084.conf match ok
+[m[1;33m[ak_vi_open:890] register device, dev type: 0
+[mnew device
+[vi_register_device:685] new dev=0x14008
+ION: alloc 25165824 bytes for process 8738 failed
+[1;33m
+----- libakuio.so V3.1.01 -----
+[m[libakuio][/dev/ion] kernel config reserve mem size: 25165824, 0x1800000
+
+
+ispsdk_lib version:V3.1.00 
+--- AK_ISP_sdk_init g_fd=5 ---
+hight light:
+	frame_rate=15 max_exp_time=1500 low_light_gain=24
+low light:
+	frame_rate=15 max_exp_time=1500 light_gain=24
+hight light fps: 15
+[1;33m[isp_set_sensor_fps:1859] set sensor fps: 15
+[m[1;33m[set_fps:185] set fps:15 ok
+[mregister vi device ok, dev_count=1
+[1;33m[ak_vi_open:900] register device OK, pdev: 0x14008
+[m[1;33m[vi_new_user:490] now user_flg=0, user_ref=1
+[msensor resolution height:720, width:1280.
+E/[libakuio]: akuio_alloc_pmem error: akuio not init
+E/[libakuio]: akuio_vaddr2paddr input arg is NULL
+[load_def_awb_step:205] get awb_attr ok, auto_awb_step:30
+hight light:
+	frame_rate=15 max_exp_time=1500 low_light_gain=24
+[1;33m[change_fps_pthread:714] thread id: 8741
+[mlow light:
+	frame_rate=15 max_exp_time=1500 light_gain=24
+hight light fps: 15
+[1;33m[isp_set_sensor_fps:1859] set sensor fps: 15
+[m[1;33m[set_fps:185] set fps:15 ok
+[minit CROP succeedded! reset to CROP[1280, 720]
+[1;31m
+[isp_vi_set_main_attr:577] VIDIOC_S_FMT, Device or resource busy
+[m[1;31m
+[ak_rtsp_vi_init:193] set channel attribute failed
+[m[1;33m[ak_vi_close:1696] enter close vi
+[m[1;33m[ak_vi_close:1718] user_ref=0
+[m[isp_module_deinit:1145] join change_fps_thread...
+[reload_config_awb_step:225] get awb_attr ok, cur auto_awb_step:10, set to step:30
+[1;33m[change_fps_pthread:741] thread exit, tid: 8741
+[m[1;33m[isp_module_deinit:1147] change_fps_thread join OK
+[m--- AK_ISP_sdk_exit g_fd=5 closed ---
+[vi_unregister_device:659] unregister done
+[ak_vi_close:1730] leave
+[1;31m
+vi init fail
+[m

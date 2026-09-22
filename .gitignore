@@ -11,7 +11,7 @@ mtds/mtd6
 mtds/extracted/mtd6-jffs2/
 
 # Temporary/generated files
-*.log
+
 *.check
 *.bak
 *~
