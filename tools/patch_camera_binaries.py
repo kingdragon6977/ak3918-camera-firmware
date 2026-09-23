@@ -106,9 +106,9 @@ def build():
     #     bl  0x2c7c <ak_ai_set_volume@plt>
     # The following frame-interval setup remains unchanged.
     b4 = bytearray(b3)
-    old_clear = b"ak_ai_clear_frame_buffer\\x00"
-    volume_name = b"ak_ai_set_volume\\x00"
-    volume_padded = volume_name + (b"\\x00" * (len(old_clear) - len(volume_name)))
+    old_clear = b"ak_ai_clear_frame_buffer\x00"
+    volume_name = b"ak_ai_set_volume\x00"
+    volume_padded = volume_name + (b"\x00" * (len(old_clear) - len(volume_name)))
     patch_exact(b4, old_clear, volume_padded,
                 "dynamic symbol ak_ai_clear_frame_buffer")
 
