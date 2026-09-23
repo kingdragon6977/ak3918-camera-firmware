@@ -106,9 +106,9 @@ def build():
     # This leaves the RTSP instruction stream and clear-frame-buffer PLT
     # entry untouched.
     b4 = bytearray(b3)
-    old_source = b"ak_ai_set_source\\x00"
-    helper_name = b"ak_ai_src_gain\\x00"
-    helper_padded = helper_name + (b"\\x00" * (len(old_source) - len(helper_name)))
+    old_source = b"ak_ai_set_source" + bytes([0])
+    helper_name = b"ak_ai_src_gain" + bytes([0])
+    helper_padded = helper_name + (bytes([0]) * (len(old_source) - len(helper_name)))
     patch_exact(b4, old_source, helper_padded,
                 "dynamic symbol ak_ai_set_source")
     p_nr_v5 = OUT / "libapp_rtsp-aec0-nr1-agc0-vol5.so"
