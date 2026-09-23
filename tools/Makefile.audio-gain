@@ -8,7 +8,7 @@ VOLUME ?= 4
 all: libak_audio_gain.so
 
 libak_audio_gain.so: ak_audio_gain.c
-	$(CC) $(CFLAGS) -DAK_FIXED_AI_VOLUME=$(VOLUME) $(LDFLAGS) -o $@ $< -ldl
+	$(CC) $(CFLAGS) -DAK_FIXED_AI_VOLUME=$(VOLUME) $(LDFLAGS) -o $@ $<
 
 clean:
 	rm -f libak_audio_gain.so
