@@ -4,8 +4,8 @@
 This script does not modify the source binaries in place.
 """
 from pathlib import Path
-import argparse
 import hashlib
+import struct
 
 ROOT = Path(__file__).resolve().parents[1]
 RTSP = ROOT / "mtds/extracted/mtd5-usrfs/bin/rtsp"
@@ -35,6 +35,14 @@ def patch_exact(data, old, new, label):
     data[i:i+len(old)] = new
     return i
 
+def arm_bl(src_vma, dst_vma):
+    """Encode ARM-state BL from src_vma to dst_vma."""
+    delta = dst_vma - (src_vma + 8)
+    if delta % 4:
+        raise ValueError("unaligned ARM branch target")
+    imm24 = (delta >> 2) & 0x00ffffff
+    return struct.pack("<I", 0xeb000000 | imm24)
+
 def build():
     OUT.mkdir(exist_ok=True)
 
@@ -51,12 +59,12 @@ def build():
 
     # Audio init sequence: NR/AGC=1, AEC=1, source=MIC.
     seq = bytes.fromhex(
-        "08 00 1b e5 "  # ldr r0,[fp,#-8]
-        "01 10 a0 e3 "  # mov r1,#1 ; NR/AGC
-        "42 ef ff eb "  # bl ak_ai_set_nr_agc@plt
-        "08 00 1b e5 "  # ldr r0,[fp,#-8]
-        "01 10 a0 e3 "  # mov r1,#1 ; AEC
-        "fc ef ff eb"   # bl ak_ai_set_aec@plt
+        "08 00 1b e5 "
+        "01 10 a0 e3 "
+        "42 ef ff eb "
+        "08 00 1b e5 "
+        "01 10 a0 e3 "
+        "fc ef ff eb"
     )
 
     b = bytearray(LIBAPP.read_bytes())
@@ -72,8 +80,17 @@ def build():
     p_raw = OUT / "libapp_rtsp-aec0-nragc0.so"
     p_raw.write_bytes(b2)
 
-    for p in (RTSP, OUT/"rtsp-flip00", LIBAPP, p_aec, p_raw):
-        print(f"{sha256(p)}  {p.relative_to(ROOT)}")
+    # Helper-call patching is performed after the helper's load address is chosen.
+    # The stock source-selection call is:
+    #   VMA 0x6e88: bl 0x2bd4 <ak_ai_set_source@plt>
+    # libapp_rtsp.so's .text VMA/file offset mapping is identity here, so the
+    # instruction is also at file offset 0x6e88.
+    #
+    # tools/patch_libapp_helper_call.py patches this call once a fixed helper
+    # address is available.
+
+    for q in (RTSP, OUT/"rtsp-flip00", LIBAPP, p_aec, p_raw):
+        print(f"{sha256(q)}  {q.relative_to(ROOT)}")
 
 if __name__ == "__main__":
     build()
