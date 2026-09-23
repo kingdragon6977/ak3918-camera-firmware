@@ -1,0 +1,14 @@
+CROSS ?= arm-linux-gnueabi-
+CC := $(CROSS)gcc
+CFLAGS ?= -Os -fPIC -Wall -Wextra
+LDFLAGS ?= -shared -Wl,-soname,libak_audio_gain.so
+VOLUME ?= 4
+
+.PHONY: all clean
+all: libak_audio_gain.so
+
+libak_audio_gain.so: ak_audio_gain.c
+	$(CC) $(CFLAGS) -DAK_FIXED_AI_VOLUME=$(VOLUME) $(LDFLAGS) -o $@ $< -ldl
+
+clean:
+	rm -f libak_audio_gain.so
