@@ -9,8 +9,6 @@
  * This avoids dlsym/RTLD_NEXT and therefore avoids importing a modern
  * GLIBC-versioned dlsym symbol from the host cross-toolchain.
  */
-#include <stdio.h>
-
 #ifndef AK_FIXED_AI_VOLUME
 #define AK_FIXED_AI_VOLUME 4
 #endif
@@ -27,7 +25,5 @@ int ak_ai_src_gain(void *ai, int source)
         return rc;
 
     vrc = ak_ai_set_volume(ai, AK_FIXED_AI_VOLUME);
-    fprintf(stderr, "[ak-audio-gain] source=%d volume=%d rc=%d\n",
-            source, AK_FIXED_AI_VOLUME, vrc);
     return vrc;
 }
