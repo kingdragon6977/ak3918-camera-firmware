@@ -89,7 +89,7 @@ def build():
     # tools/patch_libapp_helper_call.py patches this call once a fixed helper
     # address is available.
 
-    for q in (RTSP, OUT/"rtsp-flip00", LIBAPP, p_aec, p_raw):
+    for q in (RTSP, OUT/"rtsp-flip00", LIBAPP, p_aec, p_raw, p_nr):
         print(f"{sha256(q)}  {q.relative_to(ROOT)}")
 
 if __name__ == "__main__":
