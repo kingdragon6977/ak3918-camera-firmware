@@ -69,25 +69,32 @@ def build():
 
     b = bytearray(LIBAPP.read_bytes())
     base = patch_exact(b, seq, seq, "audio init sequence")
+
+    # AEC off; leave combined NR/AGC on.
     assert b[base+16:base+20] == ARM_MOV_R1_1
     b[base+16:base+20] = ARM_MOV_R1_0
     p_aec = OUT / "libapp_rtsp-aec0.so"
     p_aec.write_bytes(b)
 
+    # AEC off + combined NR/AGC off (diagnostic only; known to sound worse).
     b2 = bytearray(b)
     assert b2[base+4:base+8] == ARM_MOV_R1_1
     b2[base+4:base+8] = ARM_MOV_R1_0
     p_raw = OUT / "libapp_rtsp-aec0-nragc0.so"
     p_raw.write_bytes(b2)
 
-    # Helper-call patching is performed after the helper's load address is chosen.
-    # The stock source-selection call is:
-    #   VMA 0x6e88: bl 0x2bd4 <ak_ai_set_source@plt>
-    # libapp_rtsp.so's .text VMA/file offset mapping is identity here, so the
-    # instruction is also at file offset 0x6e88.
-    #
-    # tools/patch_libapp_helper_call.py patches this call once a fixed helper
-    # address is available.
+    # AEC off + NR on + AGC off:
+    # libapp_rtsp imports ak_ai_set_nr_agc, but libplat_ai also exports
+    # ak_ai_set_nr.  The shorter symbol name fits in-place in .dynstr,
+    # so the existing relocation/PLT entry can resolve to ak_ai_set_nr
+    # without changing ELF layout.
+    b3 = bytearray(b)
+    old_name = b"ak_ai_set_nr_agc\x00"
+    short_name = b"ak_ai_set_nr\x00"
+    new_name = short_name + (b"\x00" * (len(old_name) - len(short_name)))
+    patch_exact(b3, old_name, new_name, "dynamic symbol ak_ai_set_nr_agc")
+    p_nr = OUT / "libapp_rtsp-aec0-nr1-agc0.so"
+    p_nr.write_bytes(b3)
 
     for q in (RTSP, OUT/"rtsp-flip00", LIBAPP, p_aec, p_raw, p_nr):
         print(f"{sha256(q)}  {q.relative_to(ROOT)}")
