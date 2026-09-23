@@ -18,7 +18,7 @@
 extern int ak_ai_set_source(void *ai, int source);
 extern int ak_ai_set_volume(void *ai, int volume);
 
-int ak_audio_set_source_and_gain(void *ai, int source)
+int ak_ai_src_gain(void *ai, int source)
 {
     int rc = ak_ai_set_source(ai, source);
     int vrc;
