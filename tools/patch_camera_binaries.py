@@ -97,27 +97,20 @@ def build():
     p_nr = OUT / "libapp_rtsp-aec0-nr1-agc0.so"
     p_nr.write_bytes(b3)
 
-    # Fixed API volume 5 while preserving AEC=0, NR=1 and AGC off.
-    # Stock libapp_rtsp does not import ak_ai_set_volume, so reuse the
-    # startup-only ak_ai_clear_frame_buffer PLT slot by renaming its dynsym.
-    # At 0x6e8c r0 is loaded with the AI handle. Replace the clear-buffer
-    # call at 0x6e90 plus the redundant handle reload at 0x6e94 with:
-    #     mov r1, #5
-    #     bl  0x2c7c <ak_ai_set_volume@plt>
-    # The following frame-interval setup remains unchanged.
+    # Safe fixed-volume helper patch while preserving AEC=0, NR=1, AGC off
+    # and the original ak_ai_clear_frame_buffer() call.  Redirect only the
+    # ak_ai_set_source dynsym to the short helper symbol ak_ai_src_gain.
+    # Run with LD_PRELOAD=/tmp/libak_audio_gain.so so the helper performs:
+    #     ak_ai_set_source(ai, source)
+    #     ak_ai_set_volume(ai, AK_FIXED_AI_VOLUME)
+    # This leaves the RTSP instruction stream and clear-frame-buffer PLT
+    # entry untouched.
     b4 = bytearray(b3)
-    old_clear = b"ak_ai_clear_frame_buffer\x00"
-    volume_name = b"ak_ai_set_volume\x00"
-    volume_padded = volume_name + (b"\x00" * (len(old_clear) - len(volume_name)))
-    patch_exact(b4, old_clear, volume_padded,
-                "dynamic symbol ak_ai_clear_frame_buffer")
-
-    assert b4[0x6e8c:0x6e90] == bytes.fromhex("08 00 1b e5")
-    assert b4[0x6e90:0x6e94] == arm_bl(0x6e90, 0x2c7c)
-    assert b4[0x6e94:0x6e98] == bytes.fromhex("08 00 1b e5")
-    b4[0x6e90:0x6e94] = ARM_MOV_R1_5
-    b4[0x6e94:0x6e98] = arm_bl(0x6e94, 0x2c7c)
-
+    old_source = b"ak_ai_set_source\\x00"
+    helper_name = b"ak_ai_src_gain\\x00"
+    helper_padded = helper_name + (b"\\x00" * (len(old_source) - len(helper_name)))
+    patch_exact(b4, old_source, helper_padded,
+                "dynamic symbol ak_ai_set_source")
     p_nr_v5 = OUT / "libapp_rtsp-aec0-nr1-agc0-vol5.so"
     p_nr_v5.write_bytes(b4)
 
