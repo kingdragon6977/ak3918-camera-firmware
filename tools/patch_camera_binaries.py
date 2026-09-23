@@ -16,6 +16,7 @@ ARM_MOV_R1_1 = bytes.fromhex("01 10 a0 e3")
 ARM_MOV_R1_0 = bytes.fromhex("00 10 a0 e3")
 ARM_MOV_R2_1 = bytes.fromhex("01 20 a0 e3")
 ARM_MOV_R2_0 = bytes.fromhex("00 20 a0 e3")
+ARM_MOV_R1_5 = bytes.fromhex("05 10 a0 e3")
 
 def sha256(p):
     return hashlib.sha256(p.read_bytes()).hexdigest()
@@ -96,7 +97,31 @@ def build():
     p_nr = OUT / "libapp_rtsp-aec0-nr1-agc0.so"
     p_nr.write_bytes(b3)
 
-    for q in (RTSP, OUT/"rtsp-flip00", LIBAPP, p_aec, p_raw, p_nr):
+    # Fixed API volume 5 while preserving AEC=0, NR=1 and AGC off.
+    # Stock libapp_rtsp does not import ak_ai_set_volume, so reuse the
+    # startup-only ak_ai_clear_frame_buffer PLT slot by renaming its dynsym.
+    # At 0x6e8c r0 is loaded with the AI handle. Replace the clear-buffer
+    # call at 0x6e90 plus the redundant handle reload at 0x6e94 with:
+    #     mov r1, #5
+    #     bl  0x2c7c <ak_ai_set_volume@plt>
+    # The following frame-interval setup remains unchanged.
+    b4 = bytearray(b3)
+    old_clear = b"ak_ai_clear_frame_buffer\\x00"
+    volume_name = b"ak_ai_set_volume\\x00"
+    volume_padded = volume_name + (b"\\x00" * (len(old_clear) - len(volume_name)))
+    patch_exact(b4, old_clear, volume_padded,
+                "dynamic symbol ak_ai_clear_frame_buffer")
+
+    assert b4[0x6e8c:0x6e90] == bytes.fromhex("08 00 1b e5")
+    assert b4[0x6e90:0x6e94] == arm_bl(0x6e90, 0x2c7c)
+    assert b4[0x6e94:0x6e98] == bytes.fromhex("08 00 1b e5")
+    b4[0x6e90:0x6e94] = ARM_MOV_R1_5
+    b4[0x6e94:0x6e98] = arm_bl(0x6e94, 0x2c7c)
+
+    p_nr_v5 = OUT / "libapp_rtsp-aec0-nr1-agc0-vol5.so"
+    p_nr_v5.write_bytes(b4)
+
+    for q in (RTSP, OUT/"rtsp-flip00", LIBAPP, p_aec, p_raw, p_nr, p_nr_v5):
         print(f"{sha256(q)}  {q.relative_to(ROOT)}")
 
 if __name__ == "__main__":
