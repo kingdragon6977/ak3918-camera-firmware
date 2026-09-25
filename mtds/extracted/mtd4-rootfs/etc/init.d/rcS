@@ -27,6 +27,13 @@ echo "[+] Mounting filesystems..."
 mount -t squashfs /dev/mtdblock5 /usr
 mount -t jffs2 /dev/mtdblock6 /etc/jffs2
 
+# Camera-local timezone.  Source this file so TZ is inherited by all
+# services started below.  Default to US Eastern time if it is absent.
+if [ -f /etc/jffs2/time_zone.sh ]; then
+    . /etc/jffs2/time_zone.sh
+else
+    export TZ='EST5EDT,M3.2.0/2,M11.1.0/2'
+fi
 
 /usr/bin/tcpsvd 0 21 ftpd -w / -t 600 &
 
@@ -68,6 +75,12 @@ echo "[+] Starting PTZ..."
 
 sleep 5
 ntpd -n -N -p 162.159.200.1 &
+
+# Camera-specific IR/IR-cut controller.  It uses local time from TZ above.
+if [ -x /etc/jffs2/irrun.sh ]; then
+    /etc/jffs2/irrun.sh >/tmp/irrun.log 2>&1 &
+fi
+
 #/data/runptz.sh &
 
 #sleep 3
