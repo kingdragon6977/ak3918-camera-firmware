@@ -9,7 +9,7 @@ import struct
 
 ROOT = Path(__file__).resolve().parents[1]
 RTSP = ROOT / "mtds/extracted/mtd5-usrfs/bin/rtsp"
-LIBAPP = ROOT / "lib/libapp_rtsp.so"
+LIBAPP = ROOT / "mtds/extracted/mtd5-usrfs/lib/libapp_rtsp.so"
 OUT = ROOT / "analysis"
 
 ARM_MOV_R1_1 = bytes.fromhex("01 10 a0 e3")
