@@ -6,6 +6,7 @@ M4="$ROOT/mtds/extracted/mtd4-rootfs"
 M5="$ROOT/mtds/extracted/mtd5-usrfs"
 OUT="$ROOT/build"
 STAGE="$OUT/stage"
+PACKAGE="$OUT/update-package"
 
 M4_LIMIT=$((0x100000))
 M5_LIMIT=$((0x480000))
@@ -53,11 +54,40 @@ check_size()
     fi
 }
 
-echo "[5/5] Checking partition limits and hashes"
+echo "[5/6] Checking partition limits and hashes"
 check_size "$OUT/mtd4-rootfs.squashfs" "$M4_LIMIT"
 check_size "$OUT/mtd5-usrfs.squashfs" "$M5_LIMIT"
 sha256sum "$OUT/mtd4-rootfs.squashfs" "$OUT/mtd5-usrfs.squashfs"
+
+echo "[6/6] Building update.sh-compatible update.tar"
+rm -rf "$PACKAGE"
+mkdir -p "$PACKAGE"
+cp "$OUT/mtd4-rootfs.squashfs" "$PACKAGE/root.sqsh4"
+cp "$OUT/mtd5-usrfs.squashfs" "$PACKAGE/usr.sqsh4"
+
+# TF update.sh rejects an equal fw_version, so use an explicit package
+# version rather than silently copying /usr/fw_version.
+FW_VERSION="${FW_VERSION:-6.0.05.10_202301061607-custom1}"
+printf '%s\n' "$FW_VERSION" > "$PACKAGE/fw_version"
+
+(
+    cd "$PACKAGE"
+    md5sum root.sqsh4 > root.sqsh4.md5
+    md5sum usr.sqsh4 > usr.sqsh4.md5
+    tar -cvf "$OUT/update.tar" \
+        fw_version \
+        root.sqsh4 root.sqsh4.md5 \
+        usr.sqsh4 usr.sqsh4.md5
+)
+
+echo
+echo "Updater package contents:"
+tar -tvf "$OUT/update.tar"
+echo
+sha256sum "$OUT/update.tar"
+
 echo
 echo "Build complete:"
 echo "  $OUT/mtd4-rootfs.squashfs"
 echo "  $OUT/mtd5-usrfs.squashfs"
+echo "  $OUT/update.tar"
