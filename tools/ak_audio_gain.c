@@ -10,7 +10,7 @@
  * GLIBC-versioned dlsym symbol from the host cross-toolchain.
  */
 #ifndef AK_FIXED_AI_VOLUME
-#define AK_FIXED_AI_VOLUME 4
+#define AK_FIXED_AI_VOLUME 10
 #endif
 
 extern int ak_ai_set_source(void *ai, int source);
