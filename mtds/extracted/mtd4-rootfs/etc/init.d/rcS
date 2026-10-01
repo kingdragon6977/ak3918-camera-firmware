@@ -27,13 +27,9 @@ echo "[+] Mounting filesystems..."
 mount -t squashfs /dev/mtdblock5 /usr
 mount -t jffs2 /dev/mtdblock6 /etc/jffs2
 
-# Camera-local timezone.  Source this file so TZ is inherited by all
-# services started below.  Default to US Eastern time if it is absent.
-if [ -f /etc/jffs2/time_zone.sh ]; then
-    . /etc/jffs2/time_zone.sh
-else
-    export TZ='EST5EDT,M3.2.0/2,M11.1.0/2'
-fi
+# Camera-local timezone inherited by all services started below.
+# POSIX US Eastern rules: EST in winter, EDT in summer.
+export TZ='EST5EDT,M3.2.0/2,M11.1.0/2'
 
 /usr/bin/tcpsvd 0 21 ftpd -w / -t 600 &
 
