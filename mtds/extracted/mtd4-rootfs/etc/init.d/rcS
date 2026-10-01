@@ -66,7 +66,7 @@ insmod /usr/modules/ak_info_dump.ko
 sleep 1
 telnetd &
 echo "[+] Starting RTSP..."
-/usr/bin/rtsp &
+LD_PRELOAD=/usr/lib/libak_audio_gain.so /usr/bin/rtsp --main-kbps 2500 --sub-kbps 400 --minqp 20 --maxqp 40 &
 
 sleep 1
 
