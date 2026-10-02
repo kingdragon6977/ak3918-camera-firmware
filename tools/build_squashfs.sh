@@ -19,10 +19,14 @@ command -v arm-anykav200-linux-uclibcgnueabi-gcc >/dev/null 2>&1 || {
     echo "error: Anyka cross compiler not in PATH" >&2
     exit 1
 }
+command -v patchelf >/dev/null 2>&1 || {
+    echo "error: patchelf not found" >&2
+    exit 1
+}
 
-echo "[1/5] Building volume-5 Anyka audio helper"
+echo "[1/5] Building volume-8 Anyka audio helper"
 make -C "$ROOT" -f tools/Makefile.audio-gain clean
-make -C "$ROOT" -f tools/Makefile.audio-gain VOLUME=5
+make -C "$ROOT" -f tools/Makefile.audio-gain VOLUME=8
 
 echo "[2/5] Generating verified binary patches"
 python3 "$ROOT/tools/patch_camera_binaries.py"
@@ -34,8 +38,10 @@ cp -a "$M5"/. "$STAGE/mtd5/"
 
 echo "[3/5] Integrating hardware-tested RTSP/audio binaries"
 install -m 0755 "$ROOT/analysis/rtsp-flip00" "$STAGE/mtd5/bin/rtsp"
-install -m 0755 "$ROOT/analysis/libapp_rtsp-aec0-nr1-agc0-vol5.so" "$STAGE/mtd5/lib/libapp_rtsp.so"
+install -m 0755 "$ROOT/analysis/libapp_rtsp-aec0-nr1-agc0-vol8.so" "$STAGE/mtd5/lib/libapp_rtsp.so"
 install -m 0755 "$ROOT/tools/libak_audio_gain.so" "$STAGE/mtd5/lib/libak_audio_gain.so"
+# Load the gain helper as a normal dependency; avoid global LD_PRELOAD.
+patchelf --add-needed libak_audio_gain.so "$STAGE/mtd5/lib/libapp_rtsp.so"
 
 echo "[4/5] Building SquashFS 4.x images"
 rm -f "$OUT/mtd4-rootfs.squashfs" "$OUT/mtd5-usrfs.squashfs"
