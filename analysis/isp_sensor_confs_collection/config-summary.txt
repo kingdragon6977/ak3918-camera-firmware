@@ -1,0 +1,264 @@
+===== sensor/isp_gc1084.conf =====
+104238 sensor/isp_gc1084.conf
+dd8938b979ba1aaefabbf3ae9ad382b1  sensor/isp_gc1084.conf
+3.05_032401
+0324 
+v0.4_release_GC1084_DVP_base27M@pclk=36Mhz_1280x720_30fps
+V2 YY change day/night
+3.05_032401
+5.22 blc sharp wdr yuveffect
+8.4 sharp wdr denoise 3dnr
+8.24 contrast
+3.05_032401
+V2 change day ccm sharp /night lum noise
+
+===== sensor1/isp_gc1084.conf =====
+104238 sensor1/isp_gc1084.conf
+dd8938b979ba1aaefabbf3ae9ad382b1  sensor1/isp_gc1084.conf
+3.05_032401
+0324 
+v0.4_release_GC1084_DVP_base27M@pclk=36Mhz_1280x720_30fps
+V2 YY change day/night
+3.05_032401
+5.22 blc sharp wdr yuveffect
+8.4 sharp wdr denoise 3dnr
+8.24 contrast
+3.05_032401
+V2 change day ccm sharp /night lum noise
+
+===== isp_sensor_confs_collection/isp_F37_mipi_1lane_123101_tuke_big_len.conf =====
+69556 isp_sensor_confs_collection/isp_F37_mipi_1lane_123101_tuke_big_len.conf
+31438759d924e506e6728191e5a32cd4  isp_sensor_confs_collection/isp_F37_mipi_1lane_123101_tuke_big_len.conf
+4.003_MIPI0119
+01.15 
+KJJJJIIIIHHHHFEDCBBAA@@@@@@@AAAABAAAAAAABBBBCEGIKKKKKKKKKKLLMLLKK
+~|{ywwxxyzz{{|}}}}~~~
+~}||||||{z{|}~
+~~~~~}||}
+76431/024689;=?ABDFGIKMGA;44445543210/-159=AFGHIJKLNMJFB>AEDCNG?7
+~}|{{{{||||}}}~~
+~}~~
+#"! 
+A:358;>ADIOU[`flrv{
+zskf`ZTbq
+xof]ULC:>BGKPONLKI=EMU39?FIMRMGA
+~}|zzz{{{||}}}~~
+3.(*,.0259>BGKPTY\`cgke_YSOJFALXd]VOHA:3,/36:>=<;:905;A(-279<@<83
+~~~~~~~~
+#%%%&&''((()))**+-/141.+((()*,.00/.--,+*****++++++,&%$-*&&&'-4+"#
+4.003_MIPI0119
+9.5 reduce smear
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+===== isp_sensor_confs_collection/isp_gc1034_0.conf =====
+69284 isp_sensor_confs_collection/isp_gc1034_0.conf
+28d82778c40cefe7c55951d1f500daff  isp_sensor_confs_collection/isp_gc1034_0.conf
+3.001
+5.22 3dnr wdr sharp
+3.001
+5.22 blc sharp wdr yuveffect
+
+===== isp_sensor_confs_collection/isp_gc1054_0.conf =====
+69692 isp_sensor_confs_collection/isp_gc1054_0.conf
+2893853ce216f929afdebde032bc9df2  isp_sensor_confs_collection/isp_gc1054_0.conf
+yl-0322
+5.22 3dnr wdr sharp
+7.18 sharp blc yuevffect exp
+8.5 sharp denoise 3dnr yz
+8.24 awb wdr sharp
+9.8 wdr awb exp
+2019.1.8 wuguangmin
+2019.3.22 move indistinct on
+yl-0322
+5.22 blc sharp wdr yuveffect
+8.4 sharp wdr denoise 3dnr
+8.24 contrast
+
+===== isp_sensor_confs_collection/isp_gc1054.conf =====
+69692 isp_sensor_confs_collection/isp_gc1054.conf
+2893853ce216f929afdebde032bc9df2  isp_sensor_confs_collection/isp_gc1054.conf
+yl-0322
+5.22 3dnr wdr sharp
+7.18 sharp blc yuevffect exp
+8.5 sharp denoise 3dnr yz
+8.24 awb wdr sharp
+9.8 wdr awb exp
+2019.1.8 wuguangmin
+2019.3.22 move indistinct on
+yl-0322
+5.22 blc sharp wdr yuveffect
+8.4 sharp wdr denoise 3dnr
+8.24 contrast
+
+===== isp_sensor_confs_collection/isp_gc2053_mipi_2lane_h3.conf =====
+69704 isp_sensor_confs_collection/isp_gc2053_mipi_2lane_h3.conf
+aeaca68ec16d0b1c9520a7e7f3d7217f  isp_sensor_confs_collection/isp_gc2053_mipi_2lane_h3.conf
+4.004_2lane
+3.2 awb\contrast\sensor_init\sharp
+9.14 change CCM\WB\3D;
+6.11 change wb
+????@@@@@@@@@???????@>=<;:::::;<==>?@@@@@@@@@???????@@@@@@@@@????
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+4.004_2lane
+9.14 change Y gamma\WDR\3d\constrast\gamma;
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+===== isp_sensor_confs_collection/isp_h63_mipi_1lane_101402.conf =====
+69540 isp_sensor_confs_collection/isp_h63_mipi_1lane_101402.conf
+8c1d845e98c8082a5745c216d58dee63  isp_sensor_confs_collection/isp_h63_mipi_1lane_101402.conf
+1014
+1014 wb/ccm/gamma/saturation
+8.24 blc awb wdr
+4.27 3DNR denoise WB
+4.12 denoise DPC
+5.12 EXP BLC CCM
+8.4 denoise wdr yz
+8.24 blc awb wdr sharp
+9.8 wdr ae
+ N N N
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@BEGJJKKLLLLLIFC@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>=<;;;;;::99:<>@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+1014
+4.12 3dnr sharp exp
+4.27 3DNR denoise
+8.4 denoise wdr sharp 3dnr
+10.9 exp fps and exp time all use 15fps 1972 time
+
+===== isp_sensor_confs_collection/isp_sc1135_0.conf =====
+69188 isp_sensor_confs_collection/isp_sc1135_0.conf
+9fe6246a724d766e7689f36e324d654c  isp_sensor_confs_collection/isp_sc1135_0.conf
+3.015
+9.10 wdr 3dnr zone_weight
+9.14 For 
+ N N N
+3.015
+3DNR denoise
+RGBGamma,
+3. 7.10 
+
+===== isp_sensor_confs_collection/isp_sc1135_1.conf =====
+103782 isp_sensor_confs_collection/isp_sc1135_1.conf
+b021208911f1b9f195af30931ebdbaaa  isp_sensor_confs_collection/isp_sc1135_1.conf
+3.016
+7.5 hong shi  
+9.10 wdr 3dnr zone_weight
+9.14 For 
+ N N N
+3.016
+3DNR denoise
+RGBGamma,
+3. 7.10 
+3.016
+3DNR denoise
+RGBGamma,
+3. 7.10 
+
+===== isp_sensor_confs_collection/isp_sc1145_0.conf =====
+68892 isp_sensor_confs_collection/isp_sc1145_0.conf
+73588a7bceb647866e725808be5ce041  isp_sensor_confs_collection/isp_sc1145_0.conf
+3.003
+11.16 1145 V3
+12.1 
+3Dnr nrlut
+sharp
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>??@??>><;:988888889887777778:<>>>>>
+3.003
+11.21 
+
+===== isp_sensor_confs_collection/isp_sc1145_1.conf =====
+68892 isp_sensor_confs_collection/isp_sc1145_1.conf
+24b73aac1b983237d51bd2649f74d5bf  isp_sensor_confs_collection/isp_sc1145_1.conf
+3.003
+11.16 1145 V3
+12.1 
+3Dnr nrlut
+sharp
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>??@??>><;:988888889887777778:<>>>>>
+3.003
+11.21 
+
+===== isp_sensor_confs_collection/isp_sc1235_0.conf =====
+69420 isp_sensor_confs_collection/isp_sc1235_0.conf
+9e324e1e9dda7a97c2d4711c91f10d6d  isp_sensor_confs_collection/isp_sc1235_0.conf
+3.003-hongshi
+8.4 
+1135jg
+wdr blc
+8.15 blc awb
+3.003-hongshi
+7.20 first version
+
+===== isp_sensor_confs_collection/isp_sc1235_1.conf =====
+104206 isp_sensor_confs_collection/isp_sc1235_1.conf
+d4d54750659190bbce25615504827fda  isp_sensor_confs_collection/isp_sc1235_1.conf
+3.004-hongshi
+8.4 
+1135jg
+wdr blc
+8.15 blc awb
+4.16 change WDR
+3.004-hongshi
+7.20 first version
+3.004-hongshi
+8.4 
+1135jg
+wdr blc
+8.15 blc awb
+
+===== isp_sensor_confs_collection/isp_sc1245_0.conf =====
+69608 isp_sensor_confs_collection/isp_sc1245_0.conf
+f04ada901414820dac92da848f6d960e  isp_sensor_confs_collection/isp_sc1245_0.conf
+3.002_yaotouji
+10.31 
+12.12 
+1.18 change AWB\ccm\wdr;
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>??@??>><;:988888889887777778:<>>>>>
+3.002_yaotouji
+10.31 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>??@??>><;:988888889887777778:<>>>>>
+
+===== isp_sensor_confs_collection/isp_sc1245_1.conf =====
+69608 isp_sensor_confs_collection/isp_sc1245_1.conf
+e94135843fa2eb7754da179f358c8b68  isp_sensor_confs_collection/isp_sc1245_1.conf
+3.002-180
+10.31 
+12.12 
+1.18 for 180
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>??@??>><;:988888889887777778:<>>>>>
+3.002-180
+10.31 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>??@??>><;:988888889887777778:<>>>>>
+
+===== isp_sensor_confs_collection/isp_sc1245c_0.conf =====
+69608 isp_sensor_confs_collection/isp_sc1245c_0.conf
+94dd4ffd112bc9810c54fc309ac56968  isp_sensor_confs_collection/isp_sc1245c_0.conf
+3.002_hs_10.16
+10.31 
+12.12 
+1.18 change AWB\ccm\wdr;
+10.16 update sensorID
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>??@??>><;:988888889887777778:<>>>>>
+3.002_hs_10.16
+10.31 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>??@??>><;:988888889887777778:<>>>>>
+
+===== isp_sensor_confs_collection/isp_sc2232.conf =====
+69936 isp_sensor_confs_collection/isp_sc2232.conf
+9c353ea3ad922cbd76a22ad036872789  isp_sensor_confs_collection/isp_sc2232.conf
+3.000
+init for v200
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>??@??>><;:988888889887777778:<>>>>>
+3.000
+10.31 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>??@??>><;:988888889887777778:<>>>>>
+
