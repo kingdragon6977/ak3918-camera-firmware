@@ -1,0 +1,15 @@
+CROSS ?= arm-anykav200-linux-uclibcgnueabi-
+CC := $(CROSS)gcc
+CFLAGS ?= -Os -fPIC -Wall -Wextra
+LDFLAGS ?= -shared -Wl,-soname,libak_vi_setup.so
+SRC := tools/ak_vi_setup.c
+OUT := tools/libak_vi_setup.so
+
+.PHONY: all clean
+all: $(OUT)
+
+$(OUT): $(SRC)
+	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $<
+
+clean:
+	rm -f $(OUT)
