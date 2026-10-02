@@ -2,7 +2,7 @@ CROSS ?= arm-anykav200-linux-uclibcgnueabi-
 CC := $(CROSS)gcc
 CFLAGS ?= -Os -fPIC -Wall -Wextra
 LDFLAGS ?= -shared -Wl,-soname,libak_audio_gain.so
-VOLUME ?= 10
+VOLUME ?= 8
 SRC := tools/ak_audio_gain.c
 OUT := tools/libak_audio_gain.so
 
