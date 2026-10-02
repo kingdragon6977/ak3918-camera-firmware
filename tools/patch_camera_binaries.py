@@ -100,7 +100,7 @@ def build():
     # Safe fixed-volume helper patch while preserving AEC=0, NR=1, AGC off
     # and the original ak_ai_clear_frame_buffer() call.  Redirect only the
     # ak_ai_set_source dynsym to the short helper symbol ak_ai_src_gain.
-    # Run with LD_PRELOAD=/tmp/libak_audio_gain.so so the helper performs:
+    # The firmware build adds libak_audio_gain.so as a DT_NEEDED dependency so the helper performs:
     #     ak_ai_set_source(ai, source)
     #     ak_ai_set_volume(ai, AK_FIXED_AI_VOLUME)
     # This leaves the RTSP instruction stream and clear-frame-buffer PLT
@@ -111,7 +111,7 @@ def build():
     helper_padded = helper_name + (bytes([0]) * (len(old_source) - len(helper_name)))
     patch_exact(b4, old_source, helper_padded,
                 "dynamic symbol ak_ai_set_source")
-    p_nr_v5 = OUT / "libapp_rtsp-aec0-nr1-agc0-vol5.so"
+    p_nr_v5 = OUT / "libapp_rtsp-aec0-nr1-agc0-vol8.so"
     p_nr_v5.write_bytes(b4)
 
     for q in (RTSP, OUT/"rtsp-flip00", LIBAPP, p_aec, p_raw, p_nr, p_nr_v5):
