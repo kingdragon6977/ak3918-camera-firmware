@@ -58,6 +58,20 @@ def build():
     p.write_bytes(b)
     p.chmod(0o755)
 
+    # FPS-switch diagnostic: redirect the existing flip/mirror dynsym to a
+    # helper with a shorter name.  The helper preserves flip/mirror (0,0)
+    # and then calls ak_vi_set_switch_fps_enable(vi, 0).  No FPS value is
+    # forced by this patch.
+    b_fps = bytearray(b)
+    old_vi_setup = b"ak_vi_set_flip_mirror\x00"
+    vi_helper = b"ak_vi_setup\x00"
+    vi_helper_padded = vi_helper + (b"\x00" * (len(old_vi_setup) - len(vi_helper)))
+    patch_exact(b_fps, old_vi_setup, vi_helper_padded,
+                "dynamic symbol ak_vi_set_flip_mirror")
+    p_fps = OUT / "rtsp-flip00-fpsswitch0"
+    p_fps.write_bytes(b_fps)
+    p_fps.chmod(0o755)
+
     # Audio init sequence: NR/AGC=1, AEC=1, source=MIC.
     seq = bytes.fromhex(
         "08 00 1b e5 "
@@ -114,7 +128,7 @@ def build():
     p_nr_v5 = OUT / "libapp_rtsp-aec0-nr1-agc0-vol8.so"
     p_nr_v5.write_bytes(b4)
 
-    for q in (RTSP, OUT/"rtsp-flip00", LIBAPP, p_aec, p_raw, p_nr, p_nr_v5):
+    for q in (RTSP, OUT/"rtsp-flip00", p_fps, LIBAPP, p_aec, p_raw, p_nr, p_nr_v5):
         print(f"{sha256(q)}  {q.relative_to(ROOT)}")
 
 if __name__ == "__main__":
