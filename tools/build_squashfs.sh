@@ -24,11 +24,13 @@ command -v patchelf >/dev/null 2>&1 || {
     exit 1
 }
 
-echo "[1/5] Building volume-8 Anyka audio helper"
+echo "[1/6] Building volume-8 Anyka audio helper"
 make -C "$ROOT" -f tools/Makefile.audio-gain clean
 make -C "$ROOT" -f tools/Makefile.audio-gain VOLUME=8
+make -C "$ROOT" -f tools/Makefile.vi-setup clean
+make -C "$ROOT" -f tools/Makefile.vi-setup
 
-echo "[2/5] Generating verified binary patches"
+echo "[2/6] Generating verified binary patches"
 python3 "$ROOT/tools/patch_camera_binaries.py"
 
 rm -rf "$STAGE"
@@ -36,14 +38,16 @@ mkdir -p "$STAGE/mtd4" "$STAGE/mtd5"
 cp -a "$M4"/. "$STAGE/mtd4/"
 cp -a "$M5"/. "$STAGE/mtd5/"
 
-echo "[3/5] Integrating hardware-tested RTSP/audio binaries"
-install -m 0755 "$ROOT/analysis/rtsp-flip00" "$STAGE/mtd5/bin/rtsp"
+echo "[3/6] Integrating RTSP FPS and audio helpers"
+install -m 0755 "$ROOT/analysis/rtsp-flip00-fps30" "$STAGE/mtd5/bin/rtsp"
 install -m 0755 "$ROOT/analysis/libapp_rtsp-aec0-nr1-agc0-vol8.so" "$STAGE/mtd5/lib/libapp_rtsp.so"
 install -m 0755 "$ROOT/tools/libak_audio_gain.so" "$STAGE/mtd5/lib/libak_audio_gain.so"
+install -m 0755 "$ROOT/tools/libak_vi_setup.so" "$STAGE/mtd5/lib/libak_vi_setup.so"
+patchelf --add-needed libak_vi_setup.so "$STAGE/mtd5/bin/rtsp"
 # Load the gain helper as a normal dependency; avoid global LD_PRELOAD.
 patchelf --add-needed libak_audio_gain.so "$STAGE/mtd5/lib/libapp_rtsp.so"
 
-echo "[4/5] Building SquashFS 4.x images"
+echo "[4/6] Building SquashFS 4.x images"
 rm -f "$OUT/mtd4-rootfs.squashfs" "$OUT/mtd5-usrfs.squashfs"
 mksquashfs "$STAGE/mtd4" "$OUT/mtd4-rootfs.squashfs" -noappend -all-root -comp xz -b 131072
 mksquashfs "$STAGE/mtd5" "$OUT/mtd5-usrfs.squashfs" -noappend -all-root -comp xz -b 131072
@@ -73,7 +77,7 @@ cp "$OUT/mtd5-usrfs.squashfs" "$PACKAGE/usr.sqsh4"
 
 # TF update.sh rejects an equal fw_version, so use an explicit package
 # version rather than silently copying /usr/fw_version.
-FW_VERSION="${FW_VERSION:-6.0.05.10_202301061607-custom1}"
+FW_VERSION="${FW_VERSION:-6.0.05.10_202301061607-custom2-fps25-gain8}"
 printf '%s\n' "$FW_VERSION" > "$PACKAGE/fw_version"
 
 (

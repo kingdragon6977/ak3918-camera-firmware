@@ -58,17 +58,17 @@ def build():
     p.write_bytes(b)
     p.chmod(0o755)
 
-    # FPS-switch diagnostic: redirect the existing flip/mirror dynsym to a
+    # Fixed sensor FPS: redirect the existing flip/mirror dynsym to a
     # helper with a shorter name.  The helper preserves flip/mirror (0,0)
-    # and then calls ak_vi_set_switch_fps_enable(vi, 0).  No FPS value is
-    # forced by this patch.
+    # and calls ak_vi_set_switch_fps_enable(vi, 0), then ak_vi_set_fps(vi, 30).
+    # Encoder settings remain 25 FPS at 1280x720.
     b_fps = bytearray(b)
     old_vi_setup = b"ak_vi_set_flip_mirror\x00"
     vi_helper = b"ak_vi_setup\x00"
     vi_helper_padded = vi_helper + (b"\x00" * (len(old_vi_setup) - len(vi_helper)))
     patch_exact(b_fps, old_vi_setup, vi_helper_padded,
                 "dynamic symbol ak_vi_set_flip_mirror")
-    p_fps = OUT / "rtsp-flip00-fpsswitch0"
+    p_fps = OUT / "rtsp-flip00-fps30"
     p_fps.write_bytes(b_fps)
     p_fps.chmod(0o755)
 
